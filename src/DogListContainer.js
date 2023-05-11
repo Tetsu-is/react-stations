@@ -1,9 +1,11 @@
 // DO NOT DELETE
 import React, { useEffect, useState } from 'react'
+import { BreedsSelect } from './BreedsSelect';
 
 export const DogListContainer = () => {
 
   const [breeds, setBreeds] = useState([]);
+  const [selectedBreed, setSelectBreed] = useState();
 
   useEffect(() => {
     const fetchDogBreeds = async () => {
@@ -25,11 +27,12 @@ export const DogListContainer = () => {
   return (
     <div>
       <h1>Dog Breeds List:</h1>
-      <ul>
+      {/* <ul>
         {breeds.map((breed, index) => (
           <li key={index}>{breed}</li>
         ))}
-      </ul>
+      </ul> */}
+      <BreedsSelect breeds={breeds} />
     </div>
   );
 };
