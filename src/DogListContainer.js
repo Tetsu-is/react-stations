@@ -27,12 +27,8 @@ export const DogListContainer = () => {
   return (
     <div>
       <h1>Dog Breeds List:</h1>
-      {/* <ul>
-        {breeds.map((breed, index) => (
-          <li key={index}>{breed}</li>
-        ))}
-      </ul> */}
-      <BreedsSelect breeds={breeds} />
+      <BreedsSelect selectedBreed = {selectedBreed} setSelectedBreed = {setSelectBreed} breeds = {breeds} />
+      <h1>selectedBreed is {selectedBreed}</h1>
     </div>
   );
 };

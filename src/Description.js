@@ -14,9 +14,9 @@ export const Description = () => {
     return (
         <>  
             <p className='p'>This is for people who love dogs.</p>
-            <button onClick={handleButtonClick}>更新</button>
-            < br />
             < DogImage url = {dogUrl}/>
+            < br />
+            <button onClick={handleButtonClick}>更新</button>
         </>
     )
 }

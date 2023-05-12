@@ -1,17 +1,19 @@
 // DO NOT DELETE
 import React from "react";
 
-export const BreedsSelect = (props) => {
-    const listBreeds = props.breeds.map((breed)=>
-        <option key={breed.toString()} value={breed}>{breed}</option>
+export const BreedsSelect = ({selectedBreed, setSelectedBreed, breeds}) => {
+    const listBreeds = breeds.map((breed) =>
+        <option key={breed.toString()}> {breed} </option>
     );
-    console.log(listBreeds);
+    const handleChange = (event) => {
+        setSelectedBreed(event.target.value);
+    }
+    /* console.log(listBreeds); */
 
 
     return (
         <>
-            <h2>BreedsSelect</h2>
-            <select>
+            <select value = {selectedBreed} onChange={handleChange}>
                 {listBreeds}
             </select>
         </>
